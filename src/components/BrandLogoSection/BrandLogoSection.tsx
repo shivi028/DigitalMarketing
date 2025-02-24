@@ -90,12 +90,10 @@ const BrandLogoSlider = () => {
             </div>
           </div>
           {/* YourMission section */}
-        <div className="mt-32">
-          <YourMission />
+          <div className="mt-32">
+            <YourMission />
+          </div>
         </div>
-        </div>
-
-        
       </div>
     </div>
   );
