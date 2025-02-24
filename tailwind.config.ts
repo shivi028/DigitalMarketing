@@ -4,6 +4,32 @@ module.exports = {
 
   theme: {
   	extend: {
+		animation: {
+			"fade-in": "fade-in 0.5s ease-out forwards",
+			"fade-out": "fade-out 0.5s ease-in forwards",
+		  },
+		keyframes: {
+			"fade-in": {
+			  "0%": {
+				opacity: "0",
+				transform: "translateX(100%)",
+			  },
+			  "100%": {
+				opacity: "1",
+				transform: "translateX(0)",
+			  },
+			},
+			"fade-out": {
+			  "0%": {
+				opacity: "1",
+				transform: "translateX(0)",
+			  },
+			  "100%": {
+				opacity: "0",
+				transform: "translateX(-100%)",
+			  },
+			},
+		  },
   		colors: {
   			border: 'hsl(var(--border))',
   			input: 'hsl(var(--input))',

@@ -2,8 +2,10 @@
 import Image from "next/image"
 import { BarChart3, MessageCircle, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import LandingPageHeading from "./LandingPageheading"
 
 export default function LandingPage() {
+
   return (
     <div className="min-h-screen relative overflow-hidden flex items-center justify-center">
       {/* Base background layer */}
@@ -54,11 +56,9 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-lora leading-tight">
-                Flexible tools that save your team more time
-              </h1>
+              <LandingPageHeading/>
               <p className="text-white/80 text-lg md:text-xl">
-                Get more insights and reports for your startup and improve the customer relationships.
+              We help you scale with performance-driven digital marketing.
               </p>
               <div className="flex gap-6">
                 <Button size="lg" className="bg-gradient-to-r from-[#3D9ECB] to-[#7156A2] hover:opacity-90">
