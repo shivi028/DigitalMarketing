@@ -1,9 +1,7 @@
 "use client"
-
 import Image from "next/image"
-import { BarChart3, MessageCircle, Send, ShoppingCart, User } from "lucide-react"
+import { BarChart3, MessageCircle, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 
 export default function LandingPage() {
   return (
