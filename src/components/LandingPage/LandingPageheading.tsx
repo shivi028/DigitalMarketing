@@ -9,24 +9,23 @@ const LandingPageHeading = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % words.length);
-    }, 3000); // Change word every 3 seconds
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className=" flex items-center justify-center ">
+    <div className="flex items-center justify-center text-center">
       <h1 className="text-white text-5xl md:text-6xl lg:text-7xl font-lora leading-tight">
         {firstWords.map((firstWord, index) => (
-          <pre
+          <span
             key={index}
             className={cn(
-              "font-lora py-1 flex items-center gap-4 overflow-hidden",
-              "transition-all duration-500",
+              "inline-flex gap-4 transition-all duration-500 items-center",
               currentWord === index ? "scale-105" : "scale-100"
             )}
           >
-            <span 
+            <span
               className={cn(
                 "inline-block transition-all duration-500",
                 currentWord === index ? "text-white" : "text-purple-200"
@@ -39,14 +38,12 @@ const LandingPageHeading = () => {
                 "inline-block transition-all duration-1000",
                 currentWord === index 
                   ? "opacity-100 translate-x-0 text-white" 
-                  : index === (currentWord + 1) % words.length
-                    ? "opacity-0 -translate-x-full text-gray-500"
-                    : "opacity-0 translate-x-full text-gray-500"
+                  : "opacity-0 translate-x-full text-gray-500"
               )}
             >
               {words[index]}
             </span>
-          </pre>
+          </span>
         ))}
       </h1>
     </div>
