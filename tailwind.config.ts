@@ -14,8 +14,14 @@ module.exports = {
 		animation: {
 			"fade-in": "fade-in 0.5s ease-out forwards",
 			"fade-out": "fade-out 0.5s ease-in forwards",
+			shimmer: "shimmer 2s infinite"
 		  },
 		keyframes: {
+			shimmer: {
+				"100%": {
+				  transform: "translateX(100%)",
+				}
+			},
 			"fade-in": {
 			  "0%": {
 				opacity: "0",

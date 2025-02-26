@@ -7,7 +7,7 @@ export default function WhatWeDo() {
     <section className="container mx-auto px-6 lg:px-12 py-16">
       {/* Section Heading */}
       <div className="text-center mb-16">
-        <p className="text-md font-semibold tracking-wider mb-4 text-color-bluePrimary">
+        <p className="text-md font-semibold tracking-wider mb-4 text-purple-500">
           WHAT WE DO
         </p>
         <h1 className="text-4xl md:text-5xl font-serif max-w-4xl mx-auto">
