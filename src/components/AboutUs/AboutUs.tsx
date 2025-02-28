@@ -28,7 +28,7 @@ export default function AboutUs() {
         >
           <Sparkles className="text-[#4e1772] w-8 h-8 absolute -top-4 -left-4" />
           <p className="text-lg md:text-xl font-semibold text-[#5B21B6] italic">
-            "We don’t just market brands, we craft digital experiences that leave a mark."
+          &quot;We don&apos;t just market brands, we craft digital experiences that leave a mark.&quot;
           </p>
         </motion.div>
 
@@ -39,31 +39,9 @@ export default function AboutUs() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-[#4A0072]/80 leading-relaxed text-center"
         >
-          At <strong>HiredEasy</strong>, we blend creativity with cutting-edge strategies to help businesses grow. <br/> Our expertise in <strong>SEO, social media marketing, content creation, and performance marketing</strong> ensures that your brand stands out in the digital space. Whether you're a startup or an established company, we create tailored solutions that <strong>drive results</strong>.
+          At <strong>HiredEasy</strong>, we blend creativity with cutting-edge strategies to help businesses grow. <br/> Our expertise in <strong>SEO, social media marketing, content creation, and performance marketing</strong> ensures that your brand stands out in the digital space. Whether you&apos;re a startup or an established company, we create tailored solutions that <strong>drive results</strong>.
         </motion.p>
 
-        {/* Services Overview (Animated Blocks) */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { title: "SEO Optimization", desc: "Boost rankings & visibility" },
-            { title: "Content Marketing", desc: "Engaging & impactful content" },
-            { title: "Social Media", desc: "Grow & engage your audience" },
-            { title: "PPC Advertising", desc: "Maximize ROI with ads" },
-            { title: "Brand Strategy", desc: "Building a powerful identity" },
-            { title: "Analytics & Insights", desc: "Data-driven marketing" },
-          ].map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="p-6 bg-white shadow-md rounded-lg text-center"
-            >
-              <h3 className="text-xl font-semibold text-[#5B21B6]">{service.title}</h3>
-              <p className="text-sm text-[#4A0072]/80 mt-2">{service.desc}</p>
-            </motion.div>
-          ))}
-        </div> */}
 
         {/* Stats & Features */}
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">

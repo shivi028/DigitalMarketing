@@ -4,7 +4,7 @@ interface MarketingService {
   id: string
   title: string
   description: string
-  icon: LucideIcon
+  icon: ElementType
 }
 
 export const marketingServices: MarketingService[] = [

@@ -47,7 +47,7 @@ export default function ContactInfo({ currentWord }: ContactInfoProps) {
         </motion.h1>
       </div>
       <p className="text-lg mb-8">
-        We're here to help and answer any question you might have. We look forward to hearing from you!
+        We&apos;re here to help and answer any question you might have. We look forward to hearing from you!
       </p>
       <div className="space-y-4">
         <div className="flex items-center">

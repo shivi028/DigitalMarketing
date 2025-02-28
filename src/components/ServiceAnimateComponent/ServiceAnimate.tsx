@@ -1,5 +1,4 @@
-"use client"
-
+'use client'
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { CircleCard } from "./circle-card"
@@ -30,7 +29,7 @@ export default function DigitalMarketingGrid() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {marketingServices.map((service:any, index:any) => (
+        {marketingServices.map((service, index) => (
           <CircleCard
             key={service.id}
             icon={service.icon}
@@ -45,4 +44,3 @@ export default function DigitalMarketingGrid() {
     </div>
   )
 }
-
