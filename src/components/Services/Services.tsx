@@ -49,10 +49,11 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white py-20 px-4 sm:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto text-center mb-16">
+    <div className="min-h-[90vh]  px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-[#DCC2FF] to-[#F6F6F7]">
+     
+      <div className="max-w-7xl mx-auto text-center  pt-28 mb-16">
         <motion.h1
-          className="text-3xl md:text-5xl font-bold text-purple-500 relative"
+          className="text-3xl md:text-5xl font-bold text-purple-500 relative "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -89,7 +90,8 @@ const Services = () => {
       </div>
 
       {/* Responsive Services Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 relative p-8
+      ">
         {/* First row - 3 cards (stacked in column on small screens) */}
         {services.slice(0, 3).map((service, idx) => (
           <motion.div
@@ -142,7 +144,7 @@ const Services = () => {
           ))}
         </div>
       </div>
-    </div>
+      </div>
   );
 };
 

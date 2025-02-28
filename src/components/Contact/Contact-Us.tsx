@@ -22,7 +22,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#e5cdf9] to-[#F6F6F7]  flex items-center justify-center p-4">
-      <div className="w-full max-w-6xl bg-white rounded-lg shadow-xl overflow-hidden">
+      <div className="w-full max-w-6xl bg-white rounded-lg shadow-xl overflow-hidden mt-20 mb-20">
         <div className="flex flex-col md:flex-row">
           <ContactInfo currentWord={currentWord} />
           <ContactForm />

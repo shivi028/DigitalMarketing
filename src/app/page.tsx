@@ -1,22 +1,19 @@
+'use client'
 import BrandLogoSlider from "@/components/BrandLogoSection/BrandLogoSection";
 import YourMission from "@/components/BrandLogoSection/YourMission";
-import ContactPage from "@/components/Contact/Contact-Us";
 import Footer from "@/components/Footer/Footer";
 import LandingPage from "@/components/LandingPage/LandingPage";
-import Services from "@/components/Services/Services";
+import ServicesAnimationComponent from "@/components/ServiceAnimateComponent/ServicesAnimationComponent";
 import WhatWeDo from "@/components/WhatWeDo/WhatWeDo";
 
 export default function Home() {
   return (
     <>
         <LandingPage/>
-        <Services/>
-        <YourMission/>
-        
-        <BrandLogoSlider/>
-      
+       <ServicesAnimationComponent/>
+        <YourMission/>       
+        <BrandLogoSlider/>     
         <WhatWeDo/>
-        <ContactPage/>
         <Footer/>
         
     </>

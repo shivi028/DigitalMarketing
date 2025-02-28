@@ -14,9 +14,35 @@ module.exports = {
 		animation: {
 			"fade-in": "fade-in 0.5s ease-out forwards",
 			"fade-out": "fade-out 0.5s ease-in forwards",
-			shimmer: "shimmer 2s infinite"
+			shimmer: "shimmer 2s infinite",
+			"accordion-down": "accordion-down 0.2s ease-out",
+			"accordion-up": "accordion-up 0.2s ease-out",
+			float: "float 6s ease-in-out infinite",
+			"fade-up": "fade-up 0.5s ease-out forwards"
 		  },
 		keyframes: {
+			"accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "fade-up": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)",
+          }
+		},
 			shimmer: {
 				"100%": {
 				  transform: "translateX(100%)",
@@ -53,8 +79,10 @@ module.exports = {
 				bluePrimary: '#16458E',
 			},
   			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+				DEFAULT: "#9b87f5",
+				dark: "#7E69AB",
+				darker: "#1A1F2C",
+				light: "#E5DEFF",
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
