@@ -35,7 +35,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex gap-3 items-center">
             <Image src={'/Image/demo.png'} alt="Logo" width={30} height={20} />
-            <Link href={'/'} className="md:text-[#2e253c] text-[#2e253c] text-lg sm:text-xl font-semibold">
+            <Link href={'/'} className="md:text-[#2e253c] text-purple-600 text-lg sm:text-xl font-semibold">
               HiredEasy
             </Link>
           </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
             ))}
 
             <div className="px-3 py-2">
-              <button className="w-full px-4 py-2 border border-white/30 text-sm font-medium text-white bg-[#4b3d60] hover:bg-purple-500/50 transition-all flex items-center">
+              <button className="w-full px-4 py-2 border border-white/30 text-sm font-medium text-white bg-purple-600 hover:bg-purple-500/50 transition-all flex items-center">
                 <span className="text-">Book Demo</span>
                 <ArrowRight className="w-4 h-4 ml-1" />
               </button>

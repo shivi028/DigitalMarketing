@@ -20,11 +20,11 @@ const FeatureCard = ({ icon: Icon, title, description, delay }: FeatureCardProps
       }}
     >
       <div className="relative z-10 flex flex-col items-start gap-4">
-        <div className="rounded-xl bg-primary p-3 text-white">
+        <div className="rounded-xl bg-primary p-3 text-purple-800">
           <Icon size={24} /> {/* ✅ Correctly used */}
         </div>
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
-        <p className="text-gray-200">{description}</p>
+        <h3 className="text-xl font-semibold text-purple-900">{title}</h3>
+        <p className="text-slate-800">{description}</p>
       </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
     </motion.div>

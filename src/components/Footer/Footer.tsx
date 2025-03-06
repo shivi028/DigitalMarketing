@@ -32,16 +32,17 @@ export default function Footer() {
         {/* Newsletter Subscription */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Subscribe to Our Newsletter</h3>
-          <div className="relative">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 rounded-full text-gray-900 outline-none focus:ring-2 focus:ring-purple-300"
-            />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-500 transition-all duration-300">
-              Subscribe
-            </button>
-          </div>
+          <div className="flex w-full items-center bg-white rounded-full shadow-md overflow-hidden border border-gray-300">
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="w-full px-4 py-2 rounded-full text-gray-900 outline-none focus:ring-2 focus:ring-purple-300 pr-20"
+  />
+  <button className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-500 transition-all duration-300">
+    Subscribe
+  </button>
+</div>
+
         </div>
 
         {/* Social Media Icons */}
