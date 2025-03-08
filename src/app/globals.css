@@ -4,27 +4,20 @@
 
 :root {
   --foreground-rgb: 30, 41, 59;
-  --background-rgb: 253, 248, 242;
+  --background-rgb: 245, 245, 245; /* Soft gray background */
 }
 
 @layer components {
-  /* Custom input style to better match reference design */
   .custom-input-container {
     @apply flex flex-col sm:flex-row border border-gray-300 rounded-md overflow-hidden;
   }
-  
-  .custom-input {
-    @apply flex-grow px-4 py-3 outline-none;
-  }
-  
-  .custom-button {
-    @apply bg-orange-500 text-white font-medium px-6 py-3 whitespace-nowrap transition-colors hover:bg-orange-600;
-  }
-}
 
-@media (max-height: 600px) {
-  body {
-    min-height: 100vh;
+  .custom-input {
+    @apply flex-grow px-4 py-3 outline-none text-sm;
+  }
+
+  .custom-button {
+    @apply bg-orange-500 text-white font-medium px-6 py-3 whitespace-nowrap transition-colors hover:bg-orange-600 text-sm;
   }
 }
 
@@ -32,56 +25,17 @@ html, body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
-}
-
-.shadow-md {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background: rgb(var(--background-rgb));
+  font-size: 14px; /* Global font size reduced */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 @layer utilities {
   .service-item {
-    @apply relative cursor-pointer border-t border-black/10 py-8 transition-all duration-300;
+    @apply relative cursor-pointer border-t border-black/10 py-6 transition-all duration-300;
   }
 
   .service-item:last-child {
@@ -89,11 +43,11 @@ body {
   }
 
   .service-number {
-    @apply text-sm font-light text-black/60 tracking-wide;
+    @apply text-xs font-light text-black/60 tracking-wide;
   }
 
   .service-title {
-    @apply text-4xl sm:text-5xl md:text-6xl font-light tracking-tight transition-all duration-300;
+    @apply text-2xl sm:text-3xl md:text-4xl font-light tracking-tight transition-all duration-300;
   }
 
   .service-item:hover .service-title {
@@ -101,7 +55,7 @@ body {
   }
 
   .service-image {
-    @apply absolute right-0 top-1/2 -translate-y-1/2 w-auto h-auto max-h-[240px] object-contain z-10 rounded-md opacity-0 pointer-events-none;
+    @apply absolute right-0 top-1/2 -translate-y-1/2 w-auto h-auto max-h-[200px] object-contain z-10 rounded-md opacity-0 pointer-events-none;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.08));
     transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1), transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transform: scale(0.96) translateY(10px);
@@ -113,10 +67,65 @@ body {
   }
 
   .view-more {
-    @apply text-sm font-light text-black/60 ml-4 opacity-0 transition-opacity duration-300;
+    @apply text-xs font-light text-black/60 ml-4 opacity-0 transition-opacity duration-300;
   }
 
   .service-item:hover .view-more {
     @apply opacity-100;
   }
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .service-title {
+    @apply text-xl sm:text-2xl;
+  }
+
+  .service-number {
+    @apply text-xs;
+  }
+
+  .view-more {
+    @apply text-xs;
+  }
+
+  .service-item {
+    @apply py-4;
+  }
+}
+
+/* Adjust for larger screens */
+@media (min-width: 1024px) {
+  .service-title {
+    @apply text-3xl;
+  }
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  animation: marquee-reverse 25s linear infinite;
 }

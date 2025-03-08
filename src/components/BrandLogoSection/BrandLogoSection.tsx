@@ -277,162 +277,18 @@ export default function BrandLogoSlider() {
   }, [testimonials.length]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 to-indigo-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-950 to-indigo-40 text-white">
       <Head>
         <title>Digital Excellence | Marketing Agency</title>
         <meta name="description" content="Leading digital marketing agency transforming brands" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Hero Section */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
-        <div className="absolute w-64 h-64 bg-indigo-600 rounded-full filter blur-3xl opacity-10 -top-20 -left-20 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-cyan-400 rounded-full filter blur-3xl opacity-10 -bottom-40 -right-20 animate-pulse"></div>
-        
-        <div className="w-full md:w-1/2 z-10 mb-12 md:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            <span className="bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-              Powering Brands with Digital Excellence
-            </span>
-          </h1>
-          <p className="text-lg text-gray-300 mb-8 max-w-lg">
-            Transforming ideas into impactful digital experiences for over a decade.
-            We bring creativity, strategy, and results to every partnership.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-gradient-to-r from-indigo-500 to-cyan-400 py-3 px-8 rounded-full text-white font-medium shadow-lg shadow-indigo-500/30 hover:shadow-xl hover:shadow-indigo-500/40 transition duration-300 animate-pulse">
-              Partner with Us
-            </button>
-            <button className="py-3 px-8 rounded-full text-white font-medium border border-white/20 backdrop-blur-sm hover:bg-white/10 transition duration-300">
-              See Our Work
-            </button>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 flex justify-center relative">
-          <div className="w-full h-64 md:h-96 relative">
-            <div className="absolute inset-0  backdrop-blur-sm "></div>
-            <div className="absolute inset-0 flex items-center justify-center ">
-              <Image 
-                src="/Image/homeabout.jpg" 
-                alt="Digital Marketing Solutions" 
-                width={650} 
-                height={350}
-                className="rounded-xl shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats & Achievements Section */}
-      <section ref={statsRef} className="py-16 md:py-24 px-6 md:px-12 lg:px-24 relative border-t border-b border-white/10 bg-[#ffecd9]">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">
-              Our Achievements
-            </h2>
-            <p className="text-gray-800 max-w-2xl mx-auto">
-              Delivering exceptional results through data-driven strategies and creative excellence for over 10 years.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-indigo-500/30 transition duration-300 text-center shadow-lg">
-              <h3 className={`text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 ${statsVisible ? 'opacity-100' : 'opacity-0'}`}>
-                675+
-              </h3>
-              <p className="text-xl mt-2 text-gray-800">Digital Experts</p>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-indigo-500/30 transition duration-300 text-center shadow-lg">
-              <h3 className={`text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 ${statsVisible ? 'opacity-100' : 'opacity-0'}`} style={{transitionDelay: '200ms'}}>
-                4200+
-              </h3>
-              <p className="text-xl mt-2 text-gray-800">Projects Delivered</p>
-            </div>
-            
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-indigo-500/30 transition duration-300 text-center shadow-lg">
-              <h3 className={`text-5xl md:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent transition-all duration-1000 ${statsVisible ? 'opacity-100' : 'opacity-0'}`} style={{transitionDelay: '400ms'}}>
-                97%
-              </h3>
-              <p className="text-xl mt-2 text-gray-800">Client Satisfaction</p>
-            </div>
-          </div>
-          
-          <div className="mt-8 flex justify-center">
-            <div className="bg-gradient-to-r from-indigo-600 to-blue-700 text-white py-2 px-4 rounded inline-flex items-center gap-2">
-              <span className="text-yellow-400">★</span>
-              <span className="font-bold">4.5/5</span>
-              <span className="text-sm text-white/80">based on 500+ reviews on</span>
-              <div className="flex gap-2">
-                <span className="bg-white w-6 h-6 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-700" viewBox="0 0 20 20" fill="currentColor">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                </span>
-                <span className="bg-white w-6 h-6 rounded-full flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-blue-700" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trusted Clients Showcase */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 relative">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">
-              Our Clients
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Partnering with innovative brands across industries to deliver exceptional digital experiences.
-            </p>
-          </div>
-          
-          <div className="flex justify-center mb-16">
-            <div className="bg-[#f8ebde] bg-opacity-70 backdrop-blur-md rounded-2xl py-8 px-10 border border-indigo-500/30 shadow-lg shadow-indigo-500/10 relative overflow-hidden max-w-2xl">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-cyan-400"></div>
-              <div className="absolute top-0 right-0 w-40 h-40 bg-indigo-600 rounded-full filter blur-3xl opacity-20 -z-10"></div>
-              <h3 className="text-3xl md:text-5xl font-bold mb-2 text-white">Trusted By</h3>
-              <div className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">
-                2500+ Companies
-              </div>
-              <p className="text-2xl font-light text-white/80 mt-2">Globally</p>
-              <a href="#" className="inline-flex items-center mt-4 text-indigo-900 hover:text-cyan-300 transition">
-                See our clients 
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12">
-  {logos.map((logo, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-xl p-4 border border-white/10 hover:border-indigo-500/30 shadow-md transition duration-300 flex items-center justify-center group h-24"
-    >
-      <Image
-        src={logo.src}
-        alt={logo.name}
-        width={90}
-        height={40}
-        className="opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110"
-      />
-    </div>
-  ))}
-</div>
-
-        </div>
-      </section>
+    
+     
 
       {/* Testimonials */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 relative bg-[#e2fa97] border-t border-b border-white/10">
+      {/* <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 relative bg-[#e2fa97] border-t border-b border-white/10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-500 to-cyan-400 bg-clip-text text-transparent">
@@ -492,7 +348,7 @@ export default function BrandLogoSlider() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Studies Section */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 relative">

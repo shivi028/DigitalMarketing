@@ -33,24 +33,41 @@ const ServiceItem = ({ index, title, imageSrc, imageAlt, className }: ServiceIte
   return (
     <div
       ref={itemRef}
-      className={cn("service-item group", className)}
+      className={cn(
+        "service-item group relative p-4 transition-all duration-500",
+        className
+      )}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className="flex justify-between items-start">
+      {/* Blur effect on default */}
+      <div
+        className={cn(
+          "flex justify-between items-start backdrop-blur-md bg-white/30 rounded-lg p-4 transition-all duration-500",
+          isHovering ? "backdrop-blur-none bg-white/90 shadow-lg scale-102" : ""
+        )}
+      >
         <div>
-          <div className="service-number">[{formatIndex(index)}]</div>
-          <h3 className="service-title">{title}</h3>
+          <div className="service-number text-xl font-semibold text-gray-700">
+            [{formatIndex(index)}]
+          </div>
+          <h3 className="service-title text-2xl font-medium text-gray-800">
+            {title}
+          </h3>
         </div>
-        <span className="view-more">( View More )</span>
+        <span className="view-more text-gray-600 group-hover:text-black transition-colors duration-300">
+          ( View More )
+        </span>
       </div>
+
+      {/* Image with blur effect */}
       <img
         ref={imageRef}
         src={imageSrc}
         alt={imageAlt}
         className={cn(
-          "service-image",
-          isHovering && imageLoaded ? "opacity-100" : "opacity-0"
+          "service-image w-full h-60 object-cover rounded-lg transition-all duration-500",
+            
         )}
         loading="lazy"
       />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/Navbar";
+import { MenuNavbar } from "@/components/MenuNavbar/MenuNavbar";
 
 const lora = Lora({ subsets: ["latin"], weight: ["400", "700"] });
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
         className={`${lora.className}  antialiased`}
       >
         {/* <Navbar/> */}
+        <MenuNavbar/>
         {children}
       </body>
     </html>
